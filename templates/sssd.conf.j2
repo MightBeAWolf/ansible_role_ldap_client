@@ -32,10 +32,8 @@ ldap_group_search_base = ou=groups,dc=wolfbox,dc=dev
 ldap_sudo_search_base = ou=SUDOers,dc=wolfbox,dc=dev
 
 # SSL/TLS settings (if using)
-# ldap_id_use_start_tls = true
-# ldap_tls_reqcert = demand
-ldap_tls_reqcert = never
-# ldap_tls_cacert = /etc/sssd/ca.crt
+ldap_id_use_start_tls = true
+ldap_tls_reqcert = demand
 
 # Timeout and Cache Settings
 {% if ldap_client_expiration_days is defined and ldap_client_expiration_days >= 0 %}
